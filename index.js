@@ -1,69 +1,42 @@
-//Write your code here
 
-  // object attendee
+     // Task 1 & 2: Create attendee object
+const attendee = {
+  attendeeId: "T001",
+  name: "Alice Smith",
+  event: "JavaScript Conference",
+  ticketType: "VIP",
+  ticketPrice: 150.00
+};
 
- const attendee={ 
+// Task 3
+function logAttendeeName(attendee) {
+  console.log(attendee.name);
+}
 
-    attendeeId:"T001",
-    namee:"Alice Smith",
-    evenT: "JavaScript Conference",
-    ticketType: "VIP",
-    ticketPrice: 150.0
- }
+// Task 4
+function logTicketPrice(attendee) {
+  console.log(attendee.ticketPrice);
+}
 
+// Task 5
+function updateTicketType(attendee, newType) {
+  attendee.ticketType = newType;
+}
 
-  // logAttendeeName
+// Task 6
+function updateTicketPrice(attendee, newPrice) {
+  attendee.ticketPrice = newPrice;
+}
 
-function logAttendeeName(attendee){
+// Task 7
+function removeEventProperty(attendee) {
+  delete attendee.event;
+}
 
- return attendee.namee;
-
-
- }
- logAttendeeName()
-     // ticket price 
-
-  const logTicketPrice=(attendee)=>{
-    return attendee.ticketPrice;
-
-  }
-  logTicketPrice()
-
-// updating ticket type 
-  const updateTicketType =(attendee,newtickettype)=>{
-
-    return attendee.ticketType='supervip';
-
-  }
-  updateTicketType()
-  
- 
-// updating ticket price in an meeting attendee
-  const updateTicketPrice=(attendee,newticketprice)=>{
-
-    return attendee.ticketPrice= 500;
-
-  } 
-  updateTicketPrice()
-
-
-  // removeEventProperty  ( unfished)
-  const removeEventProperty=(attendee,event)=>{
-     
-    delete attendee.evenT;
-    return attendee
-
-         
-  }
-  removeEventProperty()
-
-
-    const addCheckedInProperty=(attendee,checkedIn )=>{
-
-     return attendee.checkedIn ='true'
-
-    }
-     addCheckedInProperty()
+// Task 8
+function addCheckedInProperty(attendee) {
+  attendee.checkedIn = true;
+}
 
 
 //Needed for the tests to work. Don't modify
