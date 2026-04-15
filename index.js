@@ -1,20 +1,6 @@
 //Write your code here
 
-
-
-//Needed for the tests to work. Don't modify
-module.exports = {
-  ...(typeof attendee !== 'undefined' && { attendee }),
-  ...(typeof logAttendeeName !== 'undefined' && { logAttendeeName }),
-  ...(typeof logTicketPrice !== 'undefined' && { logTicketPrice }),
-  ...(typeof updateTicketType !== 'undefined' && { updateTicketType }),
-  ...(typeof updateTicketPrice !== 'undefined' && { updateTicketPrice }),
-  ...(typeof removeEventProperty !== 'undefined' && { removeEventProperty }),
-  ...(typeof addCheckedInProperty !== 'undefined' && { addCheckedInProperty })
-};
-
-
- // object attendee
+  // object attendee
 
  const attendee={ 
 
@@ -34,12 +20,14 @@ function logAttendeeName(attendee){
 
 
  }
+ logAttendeeName()
      // ticket price 
 
   const logTicketPrice=(attendee)=>{
     return attendee.ticketPrice;
 
   }
+  logTicketPrice()
 
 // updating ticket type 
   const updateTicketType =(attendee,newtickettype)=>{
@@ -47,6 +35,8 @@ function logAttendeeName(attendee){
     return attendee.ticketType='supervip';
 
   }
+  updateTicketType()
+  
  
 // updating ticket price in an meeting attendee
   const updateTicketPrice=(attendee,newticketprice)=>{
@@ -54,6 +44,7 @@ function logAttendeeName(attendee){
     return attendee.ticketPrice= 500;
 
   } 
+  updateTicketPrice()
 
 
   // removeEventProperty  ( unfished)
@@ -64,6 +55,7 @@ function logAttendeeName(attendee){
 
          
   }
+  removeEventProperty()
 
 
     const addCheckedInProperty=(attendee,checkedIn )=>{
@@ -71,6 +63,20 @@ function logAttendeeName(attendee){
      return attendee.checkedIn ='true'
 
     }
-     
-      console.log(addCheckedInProperty(attendee)) 
+     addCheckedInProperty()
+
+
+//Needed for the tests to work. Don't modify
+module.exports = {
+  ...(typeof attendee !== 'undefined' && { attendee }),
+  ...(typeof logAttendeeName !== 'undefined' && { logAttendeeName }),
+  ...(typeof logTicketPrice !== 'undefined' && { logTicketPrice }),
+  ...(typeof updateTicketType !== 'undefined' && { updateTicketType }),
+  ...(typeof updateTicketPrice !== 'undefined' && { updateTicketPrice }),
+  ...(typeof removeEventProperty !== 'undefined' && { removeEventProperty }),
+  ...(typeof addCheckedInProperty !== 'undefined' && { addCheckedInProperty })
+};
+
+
+
 
